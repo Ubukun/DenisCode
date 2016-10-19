@@ -1,0 +1,20 @@
+package IndeedTests;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class IndeedJobSearch {
+
+	public static void main(String[] args) {
+		// Create firefox driver to drive the browser
+		WebDriver driver = new FirefoxDriver();
+		// Open Indeed home page
+		driver.get("http:indeed.com.uk");
+		// Find what field and enter Selenium
+		driver.findElement(By.id("what")).sendKeys("Selenium");
+		//
+
+	}
+
+}

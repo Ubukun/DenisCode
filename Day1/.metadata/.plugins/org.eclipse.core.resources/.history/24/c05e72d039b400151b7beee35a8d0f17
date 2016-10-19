@@ -1,0 +1,36 @@
+package IndeedTests;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+//import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class IndeedJobSearch {
+
+	public static void main(String[] args) throws InterruptedException {
+		// Create firefox driver to drive the browser
+		//WebDriver driver = new FirefoxDriver();
+		//C:\Users\ds\Selenium\TrainningFiles\chromedriver
+		System.setProperty("webdriver.chrome.driver","C:\\Users\\Public\\Chromedriver\\chromedriver.exe");
+		Thread.sleep(2000);
+		WebDriver driver = new ChromeDriver();
+		// Open Indeed home page
+		driver.get("http:indeed.co.uk");
+		// Find what field and enter Selenium
+		Thread.sleep(2000);
+		driver.findElement(By.id("what")).sendKeys("Selenium");
+		// Find location field and enter London
+		driver.findElement(By.id("where")).clear();
+		Thread.sleep(2000);
+		driver.findElement(By.id("where")).sendKeys("London");
+		//
+		driver.findElement(By.id("fj")).click();
+		//
+		System.out.println(driver.getTitle());
+		System.out.println(driver.findElement(By.id("searchCount")).getText());
+		\\driver.close();
+		
+
+	}
+
+}

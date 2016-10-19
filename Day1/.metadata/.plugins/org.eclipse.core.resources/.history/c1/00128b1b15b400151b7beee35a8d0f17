@@ -1,0 +1,14 @@
+package IndeedTests;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class IndeedJobSearch {
+
+	public static void main(String[] args) {
+		// Create firefox driver to drive the browser
+		WebDriver driver = new FirefoxDriver();
+
+	}
+
+}
