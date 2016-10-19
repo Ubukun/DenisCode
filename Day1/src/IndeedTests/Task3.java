@@ -53,10 +53,7 @@ public class Task3 {
 		// Click on the "Confirm this booking" button
 		driver.findElement(By.xpath(".//*[@id='top']/div[7]/div/div/div[1]/div/div[2]/div[5]/button")).click();
 		Thread.sleep(2000);
-		JavascriptExecutor js1 = (JavascriptExecutor)driver;
-		js1.executeScript("scrollBy(0,500)");
-		Thread.sleep(2000);
-		
+				
 		// Verify if invoice have been created successfully
 		actualName = driver.findElement(By.xpath(".//*[@id='top']/div[7]/div/div[7]/div[1]/div[2]")).getText();
 		if (actualName.contentEquals(expectedName)){
